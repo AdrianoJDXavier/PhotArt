@@ -6,7 +6,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>CriaAvaliacao</servlet-name>
-        <url-pattern>/CriaAvaliacao</url-pattern>
+        <url-pattern>/criar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

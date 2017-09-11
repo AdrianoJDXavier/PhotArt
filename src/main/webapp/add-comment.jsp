@@ -46,42 +46,42 @@
                         <div class="col-sm-6"> 
                             <h2>Escreva sua avaliação</h2>
                             <br />
-                            <form class="form-horizontal" action="index.html">
+                            <form class="form-horizontal" method="get" action="criar">
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Título</label>
                                     <div class="col-sm-10">
-                                      <input type="text" class="form-control" id="inputEmail3" placeholder="Muito bom!">
+                                      <input type="text" class="form-control" id="inputEmail3" placeholder="Muito bom!" name="titulo">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputEmail4" class="col-sm-2 control-label">Usuário</label>
                                     <div class="col-sm-10">
-                                      <input type="text" class="form-control" id="inputEmail4" placeholder="@johndoe">
+                                      <input type="text" class="form-control" id="inputEmail4" placeholder="@johndoe" name="usuario">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputEmail5" class="col-sm-2 control-label">Avaliação</label>
                                     <div class="col-sm-10">
-                                     <textarea class="form-control" id="inputEmail5" rows="3"></textarea>
+                                     <textarea class="form-control" id="inputEmail5" rows="3" name="avaliacao"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputEmail5" class="col-sm-2 control-label">Nota final</label>
                                     <div class="col-sm-10">
                                         <label class="radio-inline">
-                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1
                                           </label>
                                           <label class="radio-inline">
-                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
                                           </label>
                                           <label class="radio-inline">
-                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
                                           </label>
                                           <label class="radio-inline">
-                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option2"> 4
+                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
                                           </label>
                                           <label class="radio-inline">
-                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3"> 5
+                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5
                                           </label>
                                     </div>
                                 </div>

@@ -1,69 +1,43 @@
 package org.exemplo.adriano.atividade06;
 
+import Classes.Avaliacao;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-
+/**
+ *
+ * @author Adriano Xavier
+ */
 public class CriaAvaliacao extends HttpServlet {
+        static ArrayList<Avaliacao> avaliacao = new ArrayList<>();
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet CriaAvaliacao</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet CriaAvaliacao at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
+        @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+            HttpSession session = request.getSession(true);
+            
+            String titulo = request.getParameter("titulo");
+            String usuario = request.getParameter("usuario");
+            String avalia = request.getParameter("avaliacao");
+            Float nota_final = Float.parseFloat(request.getParameter("inlineRadioOptions"));
+            
+            session.setAttribute("titulo", titulo);
+            session.setAttribute("usuario", usuario);
+            session.setAttribute("avalia", avalia);
+            session.setAttribute("nota_final", nota_final);
+                        
+            avaliacao.add(new Avaliacao(titulo, usuario, avalia, nota_final));
+            
+            session.setAttribute("avaliacao", avaliacao);
+            
+            RequestDispatcher id = request.getRequestDispatcher("index.jsp");
+            id.forward(request, response);
+        }
     }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
-}
