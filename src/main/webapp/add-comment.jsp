@@ -46,7 +46,7 @@
                         <div class="col-sm-6"> 
                             <h2>Escreva sua avaliação</h2>
                             <br />
-                            <form class="form-horizontal" method="get" action="criar">
+                            <form class="form-horizontal" method="post" action="criar">
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Título</label>
                                     <div class="col-sm-10">

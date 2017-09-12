@@ -19,15 +19,17 @@ public class CriaAvaliacao extends HttpServlet {
         static ArrayList<Avaliacao> avaliacao = new ArrayList<>();
 
         @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
             HttpSession session = request.getSession(true);
             
             String titulo = request.getParameter("titulo");
             String usuario = request.getParameter("usuario");
             String avalia = request.getParameter("avaliacao");
-            Float nota_final = Float.parseFloat(request.getParameter("inlineRadioOptions"));
-            
+            float nota_final = Float.parseFloat(request.getParameter("inlineRadioOptions"));
+            for(int i =0; i < avaliacao.size(); i++){
+            float valor =+ nota_final;
+            }
             session.setAttribute("titulo", titulo);
             session.setAttribute("usuario", usuario);
             session.setAttribute("avalia", avalia);
@@ -36,6 +38,7 @@ public class CriaAvaliacao extends HttpServlet {
             avaliacao.add(new Avaliacao(titulo, usuario, avalia, nota_final));
             
             session.setAttribute("avaliacao", avaliacao);
+            session.setAttribute("valor", valor);
             
             RequestDispatcher id = request.getRequestDispatcher("index.jsp");
             id.forward(request, response);
