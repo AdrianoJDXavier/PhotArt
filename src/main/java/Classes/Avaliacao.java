@@ -7,6 +7,10 @@ public class Avaliacao {
     private String avaliacao;
     private float nota_final;
     
+    public Avaliacao(){
+        
+    }
+    
     public Avaliacao(String titulo, String ususario, String avaliacao, float nota_final ){
         this.titulo = titulo;
         this.usuario = ususario;

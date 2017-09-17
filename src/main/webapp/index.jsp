@@ -48,20 +48,20 @@
                         </div>
                         <div class="col-sm-3 col-sm-offset-6">
                             <div>
-                                <h2> <small style="color: black">Avaliação </small> 4.3 <small>/ 5</small></h2>
-                                <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+                                <h2> <small style="color: black">Avaliação </small> ${media} <small>/ 5</small></h2>
+                                <button type="button" class="btn ${ media >= 1 ? "btn-warning" : "btn-default" } btn-sm" aria-label="Left Align">
                                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                                 </button>
-                                <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+                                <button type="button" class="btn ${ media >= 2 ? "btn-warning" : "btn-default" } btn-sm" aria-label="Left Align">
                                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                                 </button>
-                                <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+                                <button type="button" class="btn ${ media >= 3 ? "btn-warning" : "btn-default" } btn-sm" aria-label="Left Align">
                                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                                 </button>
-                                <button type="button" class="btn btn-default btn-sm" aria-label="Left Align">
+                                <button type="button" class="btn ${ media >= 4 ? "btn-warning" : "btn-default" } btn-sm" aria-label="Left Align">
                                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                                 </button>
-                                <button type="button" class="btn btn-default btn-sm" aria-label="Left Align">
+                                <button type="button" class="btn ${ media >= 5 ? "btn-warning" : "btn-default" } btn-sm" aria-label="Left Align">
                                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                                 </button>
                             </div>
