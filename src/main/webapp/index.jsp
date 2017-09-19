@@ -80,7 +80,7 @@
                                         </a>
                                     </div> 
                                     <div class="media-body"> 
-                                        <h3 class="media-heading">${avaliacao.titulo} <small>${avaliacao.usuario}</small></h3> 
+                                        <h3 class="media-heading">${avaliacao.titulo} <small>por @ ${avaliacao.usuario}</small></h3> 
                                         <p class="comment">${avaliacao.avaliacao}</p> 
                                         <div>
                                             
