@@ -1,3 +1,4 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -48,7 +49,7 @@
                         </div>
                         <div class="col-sm-3 col-sm-offset-6">
                             <div>
-                                <h2> <small style="color: black">Avaliação </small> ${media} <small>/ 5</small></h2>
+                                <h2> <small style="color: black">Avaliação </small> <fmt:formatNumber value="${media}" maxFractionDigits="2"></fmt:formatNumber> <small>/ 5</small></h2>
                                 <button type="button" class="btn ${ media >= 1 ? "btn-warning" : "btn-default" } btn-sm" aria-label="Left Align">
                                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                                 </button>

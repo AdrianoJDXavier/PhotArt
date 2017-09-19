@@ -5,7 +5,7 @@ public class Avaliacao {
     private String titulo;
     private String usuario;
     private String avaliacao;
-    private float nota_final;
+    private int nota_final;
     
     public Avaliacao(){
         
@@ -15,7 +15,7 @@ public class Avaliacao {
         this.titulo = titulo;
         this.usuario = ususario;
         this.avaliacao = avaliacao;
-        this.nota_final = nota_final;
+        this.nota_final = (int) nota_final;
     }
 
     public String getTitulo() {
@@ -47,7 +47,7 @@ public class Avaliacao {
     }
 
     public void setNota_final(float nota_final) {
-        this.nota_final = nota_final;
+        this.nota_final = (int) nota_final;
     }
     
 }
