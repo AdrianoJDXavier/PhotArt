@@ -21,10 +21,17 @@ public class CriaAvaliacao extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession(true);
+        
+        if(session.getAttribute("nome") == null){
+            request.setAttribute("erro", "Favor realize login para continuar!");
+            RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+            rd.forward(request, response);
+        }
         List <Avaliacao> avaliacao = (List <Avaliacao>) session.getAttribute("avaliacao");
         if(avaliacao == null){
             avaliacao = new ArrayList<>();
         }
+        else{
         String titulo = request.getParameter("titulo");
         String usuario = request.getParameter("usuario");
         String avalia = request.getParameter("avaliacao");
@@ -42,4 +49,5 @@ public class CriaAvaliacao extends HttpServlet {
         RequestDispatcher id = request.getRequestDispatcher("index.jsp");
         id.forward(request, response);
     }
+}
 }

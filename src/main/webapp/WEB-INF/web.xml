@@ -4,9 +4,25 @@
         <servlet-name>CriaAvaliacao</servlet-name>
         <servlet-class>org.exemplo.adriano.atividade06.CriaAvaliacao</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>org.exemplo.adriano.atividade06.LoginController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PermissaoController</servlet-name>
+        <servlet-class>org.exemplo.adriano.atividade06.PermissaoController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CriaAvaliacao</servlet-name>
         <url-pattern>/criar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PermissaoController</servlet-name>
+        <url-pattern>/permissao</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
