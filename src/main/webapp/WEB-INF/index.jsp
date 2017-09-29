@@ -45,7 +45,7 @@
                     </div> 
                     <div class="row"> 
                         <div class="col-sm-3">
-                            <a id="addcomment" href="add-comment.jsp" class="btn btn-lg btn-success" > <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Adicionar Avaliação </a>
+                            <a id="addcomment" href="adiciona" class="btn btn-lg btn-success" > <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Adicionar Avaliação </a>
                         </div>
                         <div class="col-sm-3 col-sm-offset-6">
                             <div>

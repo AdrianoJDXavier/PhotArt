@@ -41,7 +41,9 @@
                 <h3 class="panel-title">Autenticação</h3>
              </div>
               <div class="panel-body">
-                  <form accept-charset="UTF-8" role="form" action="/login" method="post">
+                  <div style="color: red;"><strong>${erro}</strong></div>
+                  
+                  <form action="login" method="post">
                         <fieldset>
                     <div class="form-group">
                       <input class="form-control" placeholder="E-mail" name="email" type="text">
