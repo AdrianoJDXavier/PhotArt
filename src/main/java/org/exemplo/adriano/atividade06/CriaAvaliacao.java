@@ -20,34 +20,33 @@ public class CriaAvaliacao extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         HttpSession session = request.getSession(true);
-
-        if (session.getAttribute("usuario") == null) {
-            request.setAttribute("erro", "Favor realize login para continuar!");
-            RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-            rd.forward(request, response);
-        } else {
-            List<Avaliacao> avaliacao = (List<Avaliacao>) session.getAttribute("avaliacao");
-            if (avaliacao == null) {
-                avaliacao = new ArrayList<>();
-            } else {
-                String titulo = request.getParameter("titulo");
-                String usuario = request.getParameter("usuario");
-                String avalia = request.getParameter("avaliacao");
-                int nota_final = Integer.parseInt(request.getParameter("inlineRadioOptions"));
-
-                avaliacao.add(new Avaliacao(titulo, usuario, avalia, nota_final));
-
-                float media = 0f;
-
-                for (Avaliacao a : avaliacao) {
-                    media += a.getNota_final() / avaliacao.size();
-                }
-                session.setAttribute("media", media);
-                session.setAttribute("avaliacao", avaliacao);
-                RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/index.jsp");
-                rd.forward(request, response);
-            }
+        List<Avaliacao> avaliacoes = (List<Avaliacao>) session.getAttribute("avaliacao");
+        
+        if (avaliacoes == null) {
+            avaliacoes = new ArrayList<>();
         }
+        
+        String titulo = request.getParameter("titulo");
+        String usuario = request.getParameter("usuario");
+        String avaliacao = request.getParameter("avaliacao");
+        int nota = Integer.parseInt(request.getParameter("inlineRadioOptions"));
+        
+        Avaliacao aval = new Avaliacao(titulo, usuario, avaliacao, nota);
+        avaliacoes.add(aval);
+        
+        double media = 0;
+        for (Avaliacao a : avaliacoes) {
+            media += a.getNota_final() / ((double) avaliacoes.size());
+        }
+        request.setAttribute("media", media);
+        
+        session.setAttribute("avaliacao", avaliacoes);
+        
+        RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/index.jsp");
+        rd.forward(request, response);
     }
+
+    
 }
