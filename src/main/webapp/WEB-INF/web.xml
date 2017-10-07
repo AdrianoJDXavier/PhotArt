@@ -5,15 +5,19 @@
     </welcome-file-list>
     <servlet>
         <servlet-name>CriaAvaliacao</servlet-name>
-        <servlet-class>org.exemplo.adriano.atividade06.CriaAvaliacao</servlet-class>
+        <servlet-class>photArt.controller.CriaAvaliacao</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>loginController</servlet-name>
-        <servlet-class>org.exemplo.adriano.atividade06.loginController</servlet-class>
+        <servlet-class>photArt.controller.loginController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>AcessaJsp</servlet-name>
-        <servlet-class>org.exemplo.adriano.atividade06.AcessaJsp</servlet-class>
+        <servlet-class>photArt.controller.AcessaJsp</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>indexController</servlet-name>
+        <servlet-class>photArt.controller.indexController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CriaAvaliacao</servlet-name>
@@ -26,6 +30,10 @@
     <servlet-mapping>
         <servlet-name>AcessaJsp</servlet-name>
         <url-pattern>/adiciona</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>indexController</servlet-name>
+        <url-pattern>/index</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

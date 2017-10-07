@@ -1,6 +1,6 @@
-package org.exemplo.adriano.atividade06;
+package photArt.controller;
 
-import Classes.Usuario;
+import photArt.modell.Usuario;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

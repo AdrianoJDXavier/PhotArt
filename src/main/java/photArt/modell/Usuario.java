@@ -1,4 +1,4 @@
-package Classes;
+package photArt.modell;
 public class Usuario {
 private String nome;    
 private String senha;    

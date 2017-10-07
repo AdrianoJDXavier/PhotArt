@@ -80,23 +80,23 @@
                                         </a>
                                     </div> 
                                     <div class="media-body"> 
-                                        <h3 class="media-heading">${avaliacao.titulo} <small>por @ ${avaliacao.usuario}</small></h3> 
-                                        <p class="comment">${avaliacao.avaliacao}</p> 
+                                        <h3 class="media-heading">${avaliacao.titulo} <small>por @ ${avaliacao.autor}</small></h3> 
+                                        <p class="comment">${avaliacao.conteudo}</p> 
                                         <div>
                                             
-                                            <button type="button" class="btn ${ avaliacao.nota_final >= 1 ? "btn-warning" : "btn-default" } btn-sm" aria-label="Left Align">
+                                            <button type="button" class="btn ${ avaliacao.nota >= 1 ? "btn-warning" : "btn-default" } btn-sm" aria-label="Left Align">
                                                 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                                             </button>
-                                            <button type="button" class="btn ${ avaliacao.nota_final >= 2 ? "btn-warning" : "btn-default"} btn-sm" aria-label="Left Align">
+                                            <button type="button" class="btn ${ avaliacao.nota >= 2 ? "btn-warning" : "btn-default"} btn-sm" aria-label="Left Align">
                                                 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                                             </button>
-                                            <button type="button" class="btn ${ avaliacao.nota_final >= 3 ? "btn-warning" : "btn-default"} btn-sm" aria-label="Left Align">
+                                            <button type="button" class="btn ${ avaliacao.nota >= 3 ? "btn-warning" : "btn-default"} btn-sm" aria-label="Left Align">
                                                 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                                             </button>
-                                            <button type="button" class="btn ${ avaliacao.nota_final >= 4 ? "btn-warning" : "btn-default"}  btn-sm" aria-label="Left Align">
+                                            <button type="button" class="btn ${ avaliacao.nota >= 4 ? "btn-warning" : "btn-default"}  btn-sm" aria-label="Left Align">
                                                 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                                             </button>
-                                            <button type="button" class="btn ${ avaliacao.nota_final >= 5 ? "btn-warning" : "btn-default"} btn-sm" aria-label="Left Align">
+                                            <button type="button" class="btn ${ avaliacao.nota >= 5 ? "btn-warning" : "btn-default"} btn-sm" aria-label="Left Align">
                                                 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                                             </button>
 

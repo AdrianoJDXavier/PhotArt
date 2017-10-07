@@ -1,4 +1,4 @@
-package org.exemplo.adriano.atividade06;
+package photArt.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
